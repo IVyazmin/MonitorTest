@@ -1,12 +1,10 @@
-import Tkinter
-from PIL import ImageTk, Image
+import tkinter as tk
+import tkinter.ttk as ttk
+root = tk.Tk()
+frame = tk.Frame(root)
+frame.grid()
+combobox = ttk.Combobox(frame,values = [u"ONE",u"TWO",u"THREE"],height=3)
 
-
-main_window=Tkinter.Tk()
-
-c = Canvas(tk, width=600, height=400)
-c.pack()
-img = PhotoImage(file="/home/ilja/park/MonitorTest.png")
-c.create_image(0, 0, image=img, anchor="nw")
-
-main_window.mainloop()
+combobox.set(u"ONE")
+combobox.grid(column=0,row=0)
+root.mainloop()
